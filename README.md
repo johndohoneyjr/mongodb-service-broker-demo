@@ -41,7 +41,7 @@ This demo uses the MongoDb - Kubernetes Service Broker on AWS.  The cluster is p
   - Be sure to get all external IP's -- you need to Whitelist all of them in order for this to work without hiccups.  
 
   ```
-    kubectl get nodes -o jsonpath='{ $.items[*].status.addresses[?(@.type=="ExternalDNS")].address }'
+    kubectl get nodes -o jsonpath='{ $.items[*].status.addresses[?(@.type=="ExternalIP")].address }'
 
   ```
 
